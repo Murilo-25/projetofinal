@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1D4221;
+            color: white;
+            font-family: "Bai Jamjuree", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+            margin: 0;
+        }
+
+        button {
+            background-color: #64A712;
+            color: white;
+            font-family: "Bai Jamjuree", sans-serif;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .passo {
+            display: none;
+        }
+
+        .passo.ativo {
+            display: block;
+        }
+
+        main {
+            text-align: center;
+            max-width: 90%;
+        }
+
+        img {
+            max-width: 90%;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div id="passo-1" class="passo ativo">
+            <h1>Passo 1</h1>
+            <button class="btn-proximo" data-proximo="2">Próximo</button>
+        </div>
+        <div id="passo-2" class="passo">
+            <h1>Passo 2</h1>
+            <button class="btn-proximo" data-proximo="3">Próximo</button>
+        </div>
+        <div id="passo-3" class="passo">
+            <h1>Passo 3</h1>
+            <button class="btn-proximo" data-proximo="1">Voltar ao Passo 1</button>
+        </div>
+    </main>
+
+    <script>
+        const avanca = document.querySelectorAll('.btn-proximo');
+
+        avanca.forEach(button => {
+            button.addEventListener('click', function() {
+                const atual = document.query
